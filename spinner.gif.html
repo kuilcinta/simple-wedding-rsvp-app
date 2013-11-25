@@ -1,0 +1,429 @@
+
+<!doctype html>  
+
+<!--[if IEMobile 7 ]> <html lang="en-US"class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html lang="en-US" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en-US" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-US" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="en-US" class="no-js"><!--<![endif]-->
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<title></title>
+		
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		
+		<!-- icons & favicons -->
+		<!-- For iPhone 4 -->
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://kortneeandsean.com/wp-content/themes/mccarthy/library/images/icons/h/apple-touch-icon.png">
+		<!-- For iPad 1-->
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://kortneeandsean.com/wp-content/themes/mccarthy/library/images/icons/m/apple-touch-icon.png">
+		<!-- For iPhone 3G, iPod Touch and Android -->
+		<link rel="apple-touch-icon-precomposed" href="http://kortneeandsean.com/wp-content/themes/mccarthy/library/images/icons/l/apple-touch-icon-precomposed.png">
+		<!-- For Nokia -->
+		<link rel="shortcut icon" href="apple-touch-icon.png.html">
+		<!-- For everything else -->
+		<link rel="shortcut icon" href="favicon.ico">
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600' rel='stylesheet' type='text/css'>
+		
+		<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic' rel='stylesheet' type='text/css'>
+				
+		<!-- media-queries.js (fallback) -->
+		<!--[if lt IE 9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
+		<![endif]-->
+
+		<!-- html5.js -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+  		<link rel="pingback" href="http://kortneeandsean.com/xmlrpc.php">
+		
+		<!-- wordpress head functions -->
+		<link rel='stylesheet' id='contact-form-7-css'  href='styles.css%3Fver=3.4.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='open-sans-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C800&#038;ver=3.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='foundation-app-css'  href='app.css%3Fver=3.0.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=3.5.1'></script>
+<script type='text/javascript' src='modernizr.foundation.js%3Fver=3.5.1'></script>
+<script type='text/javascript' src='jquery.reveal.js%3Fver=3.5.1'></script>
+<script type='text/javascript' src='jquery.orbit-1.4.0.js%3Fver=3.5.1'></script>
+<script type='text/javascript' src='jquery.customforms.js%3Fver=3.5.1'></script>
+<script type='text/javascript' src='jquery.placeholder.min.js%3Fver=3.5.1'></script>
+<script type='text/javascript' src='jquery.tooltips.js%3Fver=3.5.1'></script>
+<script type='text/javascript' src='app.js%3Fver=3.5.1'></script>
+<script type='text/javascript' src='off-canvas.js%3Fver=3.5.1'></script>
+<script type='text/javascript' src='comment-reply.min.js%3Fver=3.5.1'></script>
+<link rel='canonical' href='index.html' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<!-- end of wordpress head -->
+
+		<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+
+		
+		<!-- bring in theme options styles -->
+		<style>
+			h1, h2, h3, h4, h5, h6{ 
+				font-family: Open Sans; 
+				font-weight: normal; 
+				color: #222222; 
+			}
+			body{ 
+				font-family: Open Sans; 
+				font-weight: normal; 
+				color: #222222; 
+			}
+			a{ 
+				color: #2BA6CB; 
+			}
+			a:hover{ 
+				color: #2795B6; 
+			}
+			a:active{ 
+				color: #2BA6CB; 
+			}
+			.top-nav { 
+				background-color: #4D4D4D;
+			}
+			.top-nav > li > a { 
+				color: #E6E6E6 !important;
+			}
+			.top-nav > li > a:hover { 
+				color: #E6E6E6 !important;
+			}
+			#main article {
+				border-bottom: none;
+			}
+			</style>				
+	</head>
+	
+	<script src="jquery.js"></script>
+<script src="jquery.scrollTo.js"></script>
+<script src="jquery.nav.js"></script>
+<script src="jquery.orbit-1.4.0.js"></script>
+<script>
+$(document).ready(function() {
+	
+	$('#nav').onePageNav({
+    changeHash: false,
+    scrollSpeed: 750,
+    scrollOffset: 30,
+    scrollThreshold: 0.5,
+    filter: '',
+    easing: 'swing',
+    begin: function() {
+        //I get fired when the animation is starting
+    },
+    end: function() {
+        //I get fired when the animation is ending
+    },
+    scrollChange: function($currentListItem) {
+    	switch($currentListItem.data('section')) {
+    		case 'the-couple':
+	    		$(".nav-block #nav li").css('background-color','#ffffff')
+	    		$(".nav-block #nav li a").css('color','#c0a261')
+	    		$(".nav-block #nav li.current").css('background-color','#c0a261')
+	    		$(".nav-block #nav li.current a").css('color','#ffffff')
+	    	break;
+	    	case 'wedding':
+	    		$(".nav-block #nav li").css('background-color','#ffffff')
+	    		$(".nav-block #nav li a").css('color','#c0a261')
+	    		$(".nav-block #nav li.current").css('background-color','#50363a')
+	    		$(".nav-block #nav li.current a").css('color','#ffffff')
+	    	break;
+	    	case 'registry':
+	    		$(".nav-block #nav li").css('background-color','#ffffff')
+	    		$(".nav-block #nav li a").css('color','#c0a261')
+	    		$(".nav-block #nav li.current").css('background-color','#ffffff')
+	    		$(".nav-block #nav li.current a").css('color','#50363a')
+	    	break;
+    	}
+    }
+});
+});
+</script>
+
+<script type="text/javascript">
+	 
+$(document).ready(function(){
+  
+  	// when clicking on the show button make this happne
+    $('.rsvpshow').click(function(){ 
+    
+    	// scroll to top automatically
+    	$("html, body").animate({ scrollTop: 0 }, 600,function(){
+	    	
+    		$("#nav li").removeClass('current')
+    		$(".rsvpshow").addClass('current')
+    	});
+
+    	$("#info").slideDown('fast');
+    });
+    $('.rsvphide').click(function(){ 
+	    	
+    	$(".rsvpshow").removeClass('current')
+
+    	$("#info").slideUp('fast');
+    });
+    var isAbove = true;
+    $(document).scroll(function(e){
+    	if(!isAbove && $(document).scrollTop() < $(".couple-block").offset().top) {
+	    	$(".nav-block #nav li").css('background-color','#ffffff')
+	    	$(".nav-block #nav li a").css('color','#c0a261')
+	    	isAbove = true;
+	    	console.log('changed color');
+    	} 
+    	
+    })
+ 
+});
+ 
+</script>
+
+	
+	<body class="home page page-id-2 page-template page-template-page-homepage-php">
+<div class="header-block">
+	<div id="info" style="display:none">
+		<div class="row">
+			<div class="rsvp-hd four columns centered">
+				<img src="rsvp-hd.png" alt="" title="" width="" height="" />
+			</div>
+			<div class="row">
+				<div class="rsvp-hd nine columns centered">
+					<div class="wpcf7" id="wpcf7-f12-t1-o1"><form action="spinner.gif.html#wpcf7-f12-t1-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="12" />
+<input type="hidden" name="_wpcf7_version" value="3.4.1" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f12-t1-o1" />
+<input type="hidden" name="_wpnonce" value="e7a1a5e859" />
+</div>
+<p class="attendance"><span class="wpcf7-form-control-wrap Attendance"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item"><label><input type="radio" name="Attendance" value="Not Attending" />&nbsp;<span class="wpcf7-list-item-label">Not Attending</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="Attendance" value="Attending" tabindex="1" />&nbsp;<span class="wpcf7-list-item-label">Attending</span></label></span></span></span></p>
+<p class="rsvp-name"><span class="wpcf7-form-control-wrap YourName"><input type="text" name="YourName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" placeholder="Your Name" /></span></p>
+<p class="rsvp-submit"><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" /></p>
+<div class="guests-plus"></div>
+<p class="rsvp-guests"><span class="wpcf7-form-control-wrap Guests"><input type="text" name="Guests" value="" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Add A Guest&#039;s Name" /></span></p>
+<div class="guests-x"><a class="rsvphide">Close</a></div>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div>				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="nav-block" style="position: fixed; top: 0px;">
+		<div class="row">
+			<div class="logo five columns"><img src="logo.png" alt="" title="" width="" height="" /></div>
+			<ul id="nav">
+				<li data-section="the-couple"><a href="spinner.gif.html#couple-block">The Couple</a></li>
+				<li data-section="wedding"><a href="spinner.gif.html#wedding-block">Wedding</a></li>
+				<li data-section="registry"><a href="spinner.gif.html#registry-block">Registry</a></li>
+				<li class="rsvpshow" data-section="rsvp"><a href="spinner.gif.html#">RSVP</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="banner">
+	<div class="row">
+		<div class="holy four columns centered">
+			<img src="holy.png" alt="" title="" width="" height="" />
+		</div>
+	</div>
+</div>
+
+<div id="slides">
+    <img src="1.jpg" alt="" title="" width="" height="" />
+    <img src="2.jpg" alt="" title="" width="" height="" />
+    <img src="3.jpg" alt="" title="" width="" height="" />
+    <img src="4.jpg" alt="" title="" width="" height="" />
+    <img src="5.jpg" alt="" title="" width="" height="" />
+</div>
+		
+<div id="info-mobile">
+    <div class="row">
+    	<div class="rsvp-hd four columns centered">
+    		<img src="rsvp-hd.png" alt="" title="" width="" height="" />
+    	</div>
+    </div>
+    <div class="row">
+    	<div class="rsvp-hd nine columns centered">
+    		<div class="wpcf7" id="wpcf7-f14-t2-o1"><form action="spinner.gif.html#wpcf7-f14-t2-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="14" />
+<input type="hidden" name="_wpcf7_version" value="3.4.1" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f14-t2-o1" />
+<input type="hidden" name="_wpnonce" value="06fb70379a" />
+</div>
+<p class="attendance-mobile"><span class="wpcf7-form-control-wrap Attendance"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item"><label><input type="radio" name="Attendance" value="Not Attending" />&nbsp;<span class="wpcf7-list-item-label">Not Attending</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="Attendance" value="Attending" tabindex="1" />&nbsp;<span class="wpcf7-list-item-label">Attending</span></label></span></span></span></p>
+<p class="rsvp-name-mobile"><span class="wpcf7-form-control-wrap YourName"><input type="text" name="YourName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" placeholder="Your Name" /></span></p>
+<p class="rsvp-guests-mobile"><span class="wpcf7-form-control-wrap Guests"><input type="text" name="Guests" value="" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Add A Guest&#039;s Name" /></span></p>
+<p class="rsvp-submit-mobile"><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" /></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div>    	</div>
+    </div>
+</div>
+
+<div class="couple-block" id="couple-block">
+	<div class="row">
+		<div class="couple-photo ten columns centered">
+			<img src="couple.png" alt="" title="" width="" height="" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="nine columns centered">
+			<div class="names six columns mobile-two">
+				<h1>Kortnee <span>Lujan </span>McCarrell</h1><br />
+					<p>Texas native.<br />Event coordinator.<br />Donut connoisseur.<br />World traveller.<br />Compulsive list-maker.<br />High-pitched squealer.</p>
+			</div>
+			<div class="names six columns mobile-two">
+				<h1>Sean <span>Patrick </span>McCarthy</h1><br />
+				    <p>Colorado native.<br />Graphic artist.<br />Meat & potatoes man.<br />Drummer extraordinaire.<br />Fixie rider.<br />Lover of community.<br />Hopeless romantic.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="names nine columns centered">
+			<h1>Together <span>as </span>One</h1><br />
+			<p>It was a night that Kortnee can only describe as “pure magic.”<br /><br />
+
+I remember the moment I felt free to dream and think of great ways to propose to Kortnee. It was incredible. The floodgates opened up. All gears kicked in and I was running on all cylinders. Her parents had given me their permission. I knew the date I was going to propose, but not the plan. I didn't feel rushed to ask her. I wanted a great romantic proposal rather than just a simple one. (Either gets the job done when you know the girl you love is going to say yes, by the way.) However, I'm a creative guy and a hopeless romantic. I wanted something that would swoon her and make both of us giggly just thinking of it.<br /><br />
+
+It was about a week after the dinner that I finally had figured it out. Sitting at a coffee shop, "doing work related things" I looked for the song first. About two hours into exploring various bands, strings, lyrics, and the like – I FOUND IT.  The moment ‘Gone in Bloom and Bough’ by Caspian came on, I instantly started dreaming. The song is beautiful, so it was easy to think of the emotion I wanted Kortnee to feel, and what I wanted her to be doing; walking, reading, running. So off to work I went. <br /><br />
+
+I was planning on doing all of this at a national forest just near our houses, when the forest department said I couldn't have Christmas lights or a generator on the property. Luckily, Kort and I have an amazing group of friends who have an abundant network of connections. My co-worker introduced me to a man with some land in Black Forest. It was scary how perfectly it worked out. <br /><br />
+
+So, here's the good stuff.<br /><br />
+
+Kortnee thought I was filming with a good friend I’ve been helping with on a video project. It was "basically done" but we needed to get a couple more shots to make it whole. We spent all day setting everything up. We had billion of Christmas lights (or at least the what it felt like), four speakers in the forest playing music, and plenty of party supplies to make the 'youth adventure-y' scene worth while. We were just wrapping up when, "uh-oh my tires flat". Leaving Kort to come to this mystery property. So she shows up and… the rest was pure magic.<br /><br />
+
+She said "of course.” Now we’re blissfully on our way to marriage, in holy matrimony.
+
+				</p><br />
+				<h1>The Proposal Video</h1><br />
+				<div class="flex-video widescreen">
+					<iframe width="560" height="315" src="http://www.youtube.com/embed/aMhB4HnFLjY" frameborder="0" allowfullscreen></iframe>
+				</div><br /><br />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wedding-block" id="wedding-block">
+	<div class="row">
+		<div class="wedding-photo ten columns centered">
+			<img src="wedding.png" alt="" title="" width="" height="" /><br /><br /><br /><br />
+			<img src="map.png" alt="" title="" width="" height="" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="nine columns centered">
+			<div class="names six columns mobile-two">
+				<img src="ceremony.png" alt="" title="" width="" height="" />
+				<h1>15675 COLORADO 83<br /><span>colorado springs, co 80921</span><br /><br /></h1>
+				<p>Our ceremony will take place in the woods, where it all began and where Sean proposed. Please wear appropriate shoes; due to uneven ground (it is the Rockies), heels may be difficult to walk in.</p> 
+			</div>
+			<div class="names six columns mobile-two">
+				<img src="reception.png" alt="" title="" width="" height="" />
+				<h1>IN PROGRESS<br /><span>this place needs to be perfect</span><br /><br /></h1>
+				<p>We are still in search for the perfect place to hold the party of our dreams. Your ideas & suggestions are welcome. But we can guarantee good food, good music, and good people.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="names nine columns centered">
+			<h1>Lodging</h1><br /><br />
+			<p>If you’re traveling in order to celebrate with us, here are a few hotels near the festivities.</p><br /><br />
+
+			<h1>HAMPTON INN</h1>
+				<p><a class="lodging" href="http://hamptoninn3.hilton.com/en/index.html" target="_blank" alt="site">(visit site)</a> <a class="lodging" href="https://maps.google.com/maps?hl=en&ie=UTF-8&q=Hampton+Inn&fb=1&gl=us&hq=Hampton+Inn&hnear=0x8713412ea1e6d22b:0x418eeb92f5e86b13,Colorado+Springs,+CO&view=text&ei=SLJ1UbijHsWYrgHuqIC4Dg&ved=0CGUQtQM" target="_blank" alt="map">(map it)</a></p>
+				<p class="address">1307 Republic Drive<br />
+					colorado springs, co 80921</p><br /><br />
+					
+			<h1>RESIDENCE INN</h1>
+				<p><a class="lodging" href="http://www.marriott.com/residence-inn/travel.mi" target="_blank" alt="site">(visit site)</a> <a class="lodging" href="https://maps.google.com/maps?ie=UTF-8&q=Residence+Inn&fb=1&gl=us&hq=Residence+Inn&hnear=0x8713412ea1e6d22b:0x418eeb92f5e86b13,Colorado+Springs,+CO&view=text&ei=7LF1UeSvEsLbrAGPi4HYCQ&ved=0CEYQtQM" target="_blank" alt="map">(map it)</a></p>
+				<p class="address">9805 Federal Drive<br />
+					colorado springs, co 80921</p><br /><br />
+					
+			<h1>FAIRFIELD INN</h1>
+				<p><a class="lodging" href="http://www.marriott.com/fairfield-inn/travel.mi#/intro-4/s-tour/tour-4/" target="_blank" alt="site">(visit site)</a> <a class="lodging" href="https://maps.google.com/maps?hl=en&ie=UTF-8&q=Fairfield+Inn&fb=1&gl=us&hq=Fairfield+Inn&hnear=0x8713412ea1e6d22b:0x418eeb92f5e86b13,Colorado+Springs,+CO&view=text&ei=S7N1UaCeDoWJqwH_2YDYBw&ved=0CEkQtQM" target="_blank" alt="map">(map it)</a></p>
+				<p class="address">15275 Struthers Road<br />
+					colorado springs, co 8092</p><br /><br />
+		</div>
+	</div>
+</div>
+
+<div class="registry-block" id="registry-block">
+	<div class="row">
+		<div class="registry-photo eight columns centered">
+			<img src="registry.png" alt="" title="" width="" height="" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="names nine columns centered">
+			<p>We are so grateful to have each of you involved in our lives, whether near or far. Thank you for investing in our families and in us. You have made our lives rich.<br /><br />
+ 
+We hope you can celebrate with us on August 24th as we stand before God and our community and come together in holy matrimony.<br /><br />
+
+<b>Please choose from the following:</b>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="registry-photo four columns">
+			<img src="BB&amp;B.png" alt="" title="" width="" height="" />
+		</div>
+		<div class="registry-photo four columns">
+			<img src="Target.png" alt="" title="" width="" height="" />
+		</div>
+		<div class="registry-photo four columns">
+			<img src="Crate&amp;Barrell.png" alt="" title="" width="" height="" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="signed-photo four columns centered">
+			<img src="signed.png" alt="" title="" width="" height="" />
+		</div>
+	</div>
+</div>
+
+<div class="footer-block">
+	<div class="row">
+		<div class="signed-photo ten columns centered">
+			<img src="siteby.png" alt="" title="" width="" height="" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="names eight columns centered">
+			<p><b>CONTACT US:</b><br /><br />
+				<a href="mailto:kortneemccarrell@gmail.com">kortneemccarrell@gmail.com</a><br /><br />
+
+				OR<br /><br />
+
+				<a href="mailto:sean@basikmedia.net">sean@basikmedia.net</a></p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+   $(window).load(function() {
+       $('#slides').orbit({
+	       animation: 'fade',
+	       animationSpeed: 2400
+	   });
+   });
+</script>
+
+
+		
+		<script type='text/javascript' src='jquery.form.min.js%3Fver=3.32.0-2013.04.03'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/kortneeandsean.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='scripts.js%3Fver=3.4.1'></script>
+<script type='text/javascript' src='scripts.js%3Fver=1.0'></script>
+
+	</body>
+
+</html>
