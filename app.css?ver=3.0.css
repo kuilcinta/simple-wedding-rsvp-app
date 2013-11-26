@@ -4324,13 +4324,13 @@ ul.inline-list > li > *, ul.link-list > li > * {
   position: relative;
   padding-top: 25px;
   padding-bottom: 67.5%;
-  height: 0;
+  max-height: 1600px;
   margin-bottom: 16px;
   overflow: hidden;
 }
 /* line 223, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
 .flex-video.widescreen {
-  padding-bottom: 57.25%;
+  padding-bottom: 5%;
 }
 /* line 224, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
 .flex-video.vimeo {
@@ -4743,6 +4743,7 @@ table.hide-for-medium {
     display: table !important;
   }
 }
+
 /* 1280 tablet ------------ */
 @media only screen and (max-device-width: 1280px) {
   /* NavBar --- */
@@ -4757,6 +4758,7 @@ table.hide-for-medium {
   /* line 130, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .flex-video {
     padding-top: 0;
+    max-height: 1600px;
   }
 }
 /* Between Medium and Small */
