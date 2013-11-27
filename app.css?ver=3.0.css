@@ -4324,7 +4324,7 @@ ul.inline-list > li > *, ul.link-list > li > * {
   position: relative;
   padding-top: 25px;
   padding-bottom: 67.5%;
-  max-height: 1600px;
+  max-height: 1650px;
   margin-bottom: 16px;
   overflow: hidden;
 }
@@ -4758,7 +4758,7 @@ table.hide-for-medium {
   /* line 130, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .flex-video {
     padding-top: 0;
-    max-height: 1600px;
+    max-height: 1650px;
   }
 }
 /* Between Medium and Small */
@@ -6074,10 +6074,10 @@ table.hide-for-medium {
   padding: 0;
   margin: 0;
   height: 100%;
-  padding: 24px 30px;
+  padding: 24px 20px;
   list-style: none;
   font-size: 11px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: #ccbbaa;
 }
 
