@@ -6,9 +6,9 @@ if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
  
-    $email_to = "joinusintheforest@gmail.com";
+    $email_to = "you@yourdomain.com";
  
-    $email_subject = "RSVP";
+    $email_subject = "Your email subject line";
  
      
  
@@ -34,7 +34,9 @@ if(isset($_POST['email'])) {
  
     // validation expected data exists
  
-    if(!isset($_POST['YourName']) ||
+    if(!isset($_POST['first_name']) ||
+ 
+        !isset($_POST['last_name']) ||
  
         !isset($_POST['email']) ||
  
@@ -48,7 +50,9 @@ if(isset($_POST['email'])) {
  
      
  
-    $YourName = $_POST['YourName']; // required
+    $first_name = $_POST['first_name']; // required
+ 
+    $last_name = $_POST['last_name']; // required
  
     $email_from = $_POST['email']; // required
  
@@ -70,9 +74,15 @@ if(isset($_POST['email'])) {
  
     $string_exp = "/^[A-Za-z .'-]+$/";
  
-  if(!preg_match($string_exp,$YourName)) {
+  if(!preg_match($string_exp,$first_name)) {
  
-    $error_message .= 'The name you entered does not appear to be valid.<br />';
+    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+ 
+  }
+ 
+  if(!preg_match($string_exp,$last_name)) {
+ 
+    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
  
   }
  
@@ -100,6 +110,11 @@ if(isset($_POST['email'])) {
  
     }
  
+     
+ 
+    $email_message .= "First Name: ".clean_string($first_name)."\n";
+ 
+    $email_message .= "Last Name: ".clean_string($last_name)."\n";
  
     $email_message .= "Email: ".clean_string($email_from)."\n";
  
