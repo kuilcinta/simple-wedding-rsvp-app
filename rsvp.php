@@ -1,6 +1,6 @@
 <?php
         $mail_to_send_to = "joinusintheforest@gmail.com";
-        $your_feedbackmail = "joinusintheforest@gmail.com";
+        $your_feedbackmail = "smtp.gmail.com";
 
         $sendflag = $_POST['sendflag'];
         if ( $sendflag == "send" )
