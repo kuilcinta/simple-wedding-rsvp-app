@@ -407,9 +407,9 @@
       <div class="rsvp-hd nine columns centered">
         <div class="wpcf7" id="wpcf7-f14-t2-o1">
 
-        <p style="color: white;">Please select whether you are <i>Attending</i> or <i>Not Attending</i>:</p>
+        <p style="color: white; margin-top: 30px;">Please select whether you are <i>Attending</i> or <i>Not Attending</i>:</p>
 
-              <form id="myform" method="post" action="rsvp.php" onSubmit="window.location.reload()">
+              <form id="myform-mobile" method="post" action="rsvp.php">
 
                 <p class="attendance-mobile"><span class=
                 "wpcf7-form-control-wrap Attendance"><span class=
@@ -431,7 +431,15 @@
                 <div class="wpcf7-response-output wpcf7-display-none"></div>
               </form>
               <script>
-              $( "#myform" ).submit(".submithide");
+              $(function() {
+                  $('#myform-mobile').delay( 800 ).on('submit', function(e) {
+                        e.preventDefault();
+                        setTimeout(function() {
+                             window.location.reload();
+                        },0);
+                        this.submit();
+                  });
+              });
               </script>
         </div>
       </div>
