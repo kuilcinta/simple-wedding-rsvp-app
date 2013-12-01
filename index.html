@@ -1,9 +1,9 @@
+<!DOCTYPE html>
 <!--[if IEMobile 7 ]> <html lang="en-US"class="no-js iem7"> <![endif]-->
 <!--[if lt IE 7 ]> <html lang="en-US" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en-US" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-US" class="no-js ie8"> <![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
-
 <html lang="en-US" class="no-js" xmlns="http://www.w3.org/1999/xhtml">
 <!--<![endif]-->
 
@@ -50,6 +50,7 @@
   'text/css' media='all' />
   <link rel='stylesheet' id='foundation-app-css' href='app.css%3Fver=3.0.css' type=
   'text/css' media='all' />
+  <link rel="stylesheet" href="http://jquery.bassistance.de/validate/demo/site-demos.css">
   <script type="text/javascript" src=
   "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
 </script>
@@ -233,6 +234,43 @@
 
   //]]>
   </script>
+    <script type="text/javascript">
+//<![CDATA[
+         
+  $(document).ready(function(){
+
+        // when clicking on the show button make this happne
+    $('.rsvpshow').click(function(){ 
+    
+        // scroll to top automatically
+        $("html, body").animate({ scrollTop: 0 }, 600,function(){
+                
+                $("#nav li").removeClass('current')
+                $(".rsvpshow").addClass('current')
+        });
+
+        $("#info").slideDown('slow');
+    });
+    $('.submithide').click(function(){ 
+
+        $("#info").slideUp(1500);
+            alert("Your RSVP message has been sent successfully.");
+    });
+    var isAbove = true;
+    $(document).scroll(function(e){
+        if(!isAbove && $(document).scrollTop() < $(".couple-block").offset().top) {
+                $(".nav-block #nav li").css('background-color','#f2e3de')
+                $(".nav-block #nav li a").css('color','#c0a261')
+                isAbove = true;
+                console.log('changed color');
+        } 
+        
+    })
+
+  });
+
+  //]]>
+  </script>
 </head>
 
 <body class="home page page-id-2 page-template page-template-page-homepage-php">
@@ -244,48 +282,40 @@
 
         <div class="row">
           <div class="rsvp-hd nine columns centered">
-            <div class="wpcf7" id="wpcf7-f12-t1-o1">
+            <div class="wpcf7" id="wpcf7-f12-t1-o1"><br><br><br>
+            <p style="color: white;">Please select whether you are <i>Attending</i> or <i>Not Attending</i>:</p>
 
-              <form name="contactform" method="post" action="send_form_email.php" novalidate="novalidate">
+              <form id="myform" method="post" action="rsvp.php">
                 <div style="display: none;">
-                  <input type="hidden" name="_wpcf7" value="12" /> <input type="hidden"
-                  name="_wpcf7_version" value="3.4.1" /> <input type="hidden" name=
-                  "_wpcf7_unit_tag" value="wpcf7-f12-t1-o1" /> <input type="hidden" name=
-                  "_wpnonce" value="e7a1a5e859" />
+                  <input type="hidden" name='sendflag' value="send">
                 </div>
 
                 <p class="attendance"><span class=
                 "wpcf7-form-control-wrap Attendance"><span class=
                 "wpcf7-form-control wpcf7-radio"><span class=
-                "wpcf7-list-item"><label><input type="radio" name="Attendance" value=
+                "wpcf7-list-item"><label><input type="radio" name="attendance" value=
                 "Not Attending" />&nbsp;<span class="wpcf7-list-item-label">Not
                 Attending</span></label></span><span class=
-                "wpcf7-list-item"><label><input type="radio" name="Attendance" value=
+                "wpcf7-list-item"><label><input type="radio" name="attendance" value=
                 "Attending" tabindex="1" />&nbsp;<span class=
                 "wpcf7-list-item-label">Attending</span></label></span></span></span></p>
 
                 <p class="rsvp-name"><span class=
-                "wpcf7-form-control-wrap YourName"><input type="text" name="YourName"
-                value="" size="40" class=
-                "wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                aria-required="true" placeholder="Your Name" /></span></p>
+                "wpcf7-form-control-wrap YourName"><input type="text" name="yourname"
+                value="" size="40" required style="margin-bottom: 10px;"/></span><span style="color: white;">Please Enter Your Name</span></p>
 
-                <p class="rsvp-submit"><input type="submit" value="Submit" class=
-                "wpcf7-form-control wpcf7-submit" /></p>
-
-                <div class="guests-plus"></div>
-
-                <p class="rsvp-guests"><span class=
-                "wpcf7-form-control-wrap Guests"><input type="text" name="Guests" value=
-                "" size="40" class="wpcf7-form-control wpcf7-text" placeholder=
-                "Add A Guest's Name" /></span></p>
+                <p class="rsvp-submit"><input type="submit" value="Submit"/></p>
 
                 <div class="guests-x">
                   <a class="rsvphide">Close</a>
                 </div>
 
+
                 <div class="wpcf7-response-output wpcf7-display-none"></div>
               </form>
+              <script>
+              $( "#myform" ).submit(".submithide");
+              </script>
             </div>
           </div>
         </div>
@@ -376,41 +406,34 @@
     <div class="row">
       <div class="rsvp-hd nine columns centered">
         <div class="wpcf7" id="wpcf7-f14-t2-o1">
-        
-          <form name="contactform" method="post" action="send_form_email.php" novalidate="novalidate">
-            <div style="display: none;">
-              <input type="hidden" name="_wpcf7" value="14" /> <input type="hidden" name=
-              "_wpcf7_version" value="3.4.1" /> <input type="hidden" name=
-              "_wpcf7_unit_tag" value="wpcf7-f14-t2-o1" /> <input type="hidden" name=
-              "_wpnonce" value="06fb70379a" />
-            </div>
 
-            <p class="attendance-mobile"><span class=
-            "wpcf7-form-control-wrap Attendance"><span class=
-            "wpcf7-form-control wpcf7-radio"><span class=
-            "wpcf7-list-item"><label><input type="radio" name="Attendance" value=
-            "Not Attending" />&nbsp;<span class="wpcf7-list-item-label">Not
-            Attending</span></label></span><span class=
-            "wpcf7-list-item"><label><input type="radio" name="Attendance" value=
-            "Attending" tabindex="1" />&nbsp;<span class=
-            "wpcf7-list-item-label">Attending</span></label></span></span></span></p>
+        <form name="contactform" method="post" action="rsvp.php" novalidate="novalidate">
+                <div style="display: none;">
+                  <input type="hidden" name='sendflag' value="send">
+                </div>
 
-            <p class="rsvp-name-mobile"><span class=
-            "wpcf7-form-control-wrap YourName"><input type="text" name="YourName" value=
-            "" size="40" class=
-            "wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required=
-            "true" placeholder="Your Name" /></span></p>
+                <p class="attendance-mobile"><span class=
+                "wpcf7-form-control-wrap Attendance"><span class=
+                "wpcf7-form-control wpcf7-radio"><span class=
+                "wpcf7-list-item"><label><input type="radio" name="attendance" value=
+                "Not Attending" />&nbsp;<span class="wpcf7-list-item-label">Not
+                Attending</span></label></span><span class=
+                "wpcf7-list-item"><label><input type="radio" name="attendance" value=
+                "Attending" tabindex="1" />&nbsp;<span class=
+                "wpcf7-list-item-label">Attending</span></label></span></span></span></p>
 
-            <p class="rsvp-guests-mobile"><span class=
-            "wpcf7-form-control-wrap Guests"><input type="text" name="Guests" value=""
-            size="40" class="wpcf7-form-control wpcf7-text" placeholder=
-            "Add A Guest's Name" /></span></p>
+                <p class="rsvp-name-mobile"><span class=
+                "wpcf7-form-control-wrap YourName"><input type="text" name="yourname"
+                value="" size="40" placeholder=""/></span></p>
 
-            <p class="rsvp-submit-mobile"><input type="submit" value="Submit" class=
-            "wpcf7-form-control wpcf7-submit" /></p>
+                <p class="rsvp-submit-mobile"><input type="submit" value="Submit" class="submithide" /></p>
 
-            <div class="wpcf7-response-output wpcf7-display-none"></div>
-          </form>
+                <div class="guests-x">
+                  <a class="rsvphide">Close</a>
+                </div>
+
+                <div class="wpcf7-response-output wpcf7-display-none"></div>
+              </form>
         </div>
       </div>
     </div>
