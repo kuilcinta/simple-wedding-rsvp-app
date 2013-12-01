@@ -1,33 +1,27 @@
 <?php
-        $mail_to_send_to = "joinusintheforest@gmail.com";
-        $your_feedbackmail = "smtp.gmail.com";
+require_once 'Swift-5.0.2/lib/swift_required.php';
 
-        $sendflag = $_POST['sendflag'];
-        if ( $sendflag == "send" )
-        {
-                $email = $_POST['email'] ;
-                $yourname = $_POST['yourname'] ;
-                if(empty($_POST['yourname'])){
-                   echo "Empty username!";
-                }
-                $attendance = $_POST['attendance'] ;
-                $headers = "From: $your_feedbackmail" . "\r\n" . "Reply-To: joinusintheforest@gmail.com" . "\r\n" ;
-                $a = mail( $mail_to_send_to, "RSVP", $yourname, $attendance, $headers );
-                if ($a) 
-                {
-                     header( "refresh:1; url=index.html" );
-                } else {
-                     print("Message wasn't sent, please check that you have changed emails in the bottom");
-                }
-        }
+$yourname = $_POST['yourname'] ;
+$attendance = $_POST['attendance'] ;
+
+$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
+  ->setUsername('joinusintheforest@gmail.com')
+  ->setPassword('june212014');
+
+$mailer = Swift_Mailer::newInstance($transport);
+
+$message = Swift_Message::newInstance('Test Subject')
+  ->setFrom(array('joinusintheforest@gmail.com' => 'RSVP'))
+  ->setTo(array('joinusintheforest@gmail.com'))
+  ->setBody('Name: ' .$yourname ."\n"
+.'RSVP: ' .$attendance ."\n" );
+
+// Send the message
+$result = $mailer->send($message);
+
+if ($result)
+{
+header('Location: index.html');
+}
+echo $result;
 ?>
-
-
-<!--<form method="post" action="rsvp.php">
-  <input type="hidden" name='sendflag' value="send">
-  Your Email: <input name="email" type="text" /><br />
-  Message:<br />
-  <textarea name="message" rows="15" cols="40">
-  </textarea><br />
-  <input type="submit" />
-</form>-->
