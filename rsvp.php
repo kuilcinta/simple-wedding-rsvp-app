@@ -10,7 +10,7 @@ $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
 
 $mailer = Swift_Mailer::newInstance($transport);
 
-$message = Swift_Message::newInstance('Test Subject')
+$message = Swift_Message::newInstance('-- RSVP NOTICE --')
   ->setFrom(array('joinusintheforest@gmail.com' => 'RSVP'))
   ->setTo(array('joinusintheforest@gmail.com'))
   ->setBody('Name: ' .$yourname ."\n"
