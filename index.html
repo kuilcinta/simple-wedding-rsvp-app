@@ -409,7 +409,7 @@
 
         <p style="color: white;">Please select whether you are <i>Attending</i> or <i>Not Attending</i>:</p>
 
-              <form id="myform" method="post" action="rsvp.php">
+              <form id="myform" method="post" action="rsvp.php" onSubmit="window.location.reload()">
 
                 <p class="attendance-mobile"><span class=
                 "wpcf7-form-control-wrap Attendance"><span class=
@@ -430,9 +430,6 @@
 
                 <div class="wpcf7-response-output wpcf7-display-none"></div>
               </form>
-              <script>
-              $( "#myform" ).submit(".submithide");
-              </script>
         </div>
       </div>
     </div>
