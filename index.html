@@ -407,7 +407,9 @@
       <div class="rsvp-hd nine columns centered">
         <div class="wpcf7" id="wpcf7-f14-t2-o1">
 
-        <form name="contactform" method="post" action="rsvp.php" novalidate="novalidate">
+        <p style="color: white;">Please select whether you are <i>Attending</i> or <i>Not Attending</i>:</p>
+
+              <form id="myform" method="post" action="rsvp.php">
                 <div style="display: none;">
                   <input type="hidden" name='sendflag' value="send">
                 </div>
@@ -424,16 +426,20 @@
 
                 <p class="rsvp-name-mobile"><span class=
                 "wpcf7-form-control-wrap YourName"><input type="text" name="yourname"
-                value="" size="40" placeholder=""/></span></p>
+                value="" size="40" required style="margin-bottom: 10px;"/></span><span style="color: white;">Please Enter Your Name</span></p>
 
-                <p class="rsvp-submit-mobile"><input type="submit" value="Submit" class="submithide" /></p>
+                <p class="rsvp-submit-mobile"><input type="submit" value="Submit"/></p>
 
                 <div class="guests-x">
                   <a class="rsvphide">Close</a>
                 </div>
 
+
                 <div class="wpcf7-response-output wpcf7-display-none"></div>
               </form>
+              <script>
+              $( "#myform" ).submit(".submithide");
+              </script>
         </div>
       </div>
     </div>
