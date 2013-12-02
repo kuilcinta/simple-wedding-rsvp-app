@@ -302,25 +302,34 @@
                 "Not Attending" />&nbsp;<span class="wpcf7-list-item-label">Not
                 Attending</span></label></span><span class=
                 "wpcf7-list-item"><label><input type="radio" name="attendance" value=
-                "Attending" tabindex="1" />&nbsp;<span class=
+                "Attending" checked="true" />&nbsp;<span class=
                 "wpcf7-list-item-label">Attending</span></label></span></span></span></p>
 
                 <p class="rsvp-name"><span class=
-                "wpcf7-form-control-wrap YourName"><input type="text" name="yourname"
-                value="" size="40" required style="margin-bottom: 10px;"/></span><span style="color: white;">Please enter your First & Last name</span></p>
+                "wpcf7-form-control-wrap YourName"><input id="yourname" type="text" name="yourname"
+                value="" size="40" required style="margin-bottom: 10px;"/></span>
+                <span style="color: white;">Please enter your First & Last name</span><br/><br/>
+                <span id="msgsent" style="color: white; font-size: 18px;" class="dontshow"><b>Message successfully sent!</b></span>
+                </p>
 
-                <p class="rsvp-submit"><input type="submit" value="Submit"/></p>
+                <p class="rsvp-submit"><input id="submit" type="submit" value="Submit"/></p>
 
                 <div class="guests-x">
                   <a class="rsvphide">Close</a>
                 </div>
 
-
                 <div class="wpcf7-response-output wpcf7-display-none"></div>
               </form>
               <script>
-              $( "#myform" ).submit(".submithide");
+              $('#submit').click(function(){
+                 if($('#yourname').val() != ''){
+                    $( "#msgsent" ).removeClass( "dontshow" ).delay( 2000 ).fadeOut( 500 );
+                 }
+              });
               </script>
+              <!--<script>
+              $( "#myform" ).submit(".submithide");
+              </script>-->
             </div>
           </div>
         </div>
@@ -423,29 +432,24 @@
                 "Not Attending" />&nbsp;<span class="wpcf7-list-item-label">Not
                 Attending</span></label></span><span class=
                 "wpcf7-list-item"><label><input type="radio" name="attendance" value=
-                "Attending" tabindex="1" /><span class=
+                "Attending" checked="true" /><span class=
                 "wpcf7-list-item-label">Attending</span></label></span></span></span></p>
 
                 <p class="rsvp-name-mobile"><span style="color: white;">Please enter your First & Last name</span><span class=
                 "wpcf7-form-control-wrap YourName"><input id="yourname" type="text" name="yourname"
                 value="" size="40" required style="margin-bottom: 10px; color: black;"/></span></p>
 
-                <p class="rsvp-submit-mobile"><input id="submit" type="submit" value="Submit"/></p>
+                <p class="rsvp-submit-mobile"><input id="submit-mobile" type="submit" value="Submit"/></p>
 
 
                 <div class="wpcf7-response-output wpcf7-display-none"></div>
               </form>
               <script>
-              if ($('#myform-mobile[document_type]').val() != ''){
-                $('#submit').bind('click', function() {
-                  alert('Thank you!');
-                });
-              }
-              else {
-                $('#submit').bind('click', function() {
-                  alert('Please Enter your name');
-                });
-              }
+              $('#submit-mobile').click(function(){
+                 if($('#yourname').val() != ''){
+                    alert('Your RSVP message was successfully sent!');
+                 }
+              });
               </script>
         </div>
       </div>

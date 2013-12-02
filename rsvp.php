@@ -19,9 +19,9 @@ $message = Swift_Message::newInstance('-- RSVP NOTICE --')
 // Send the message
 $result = $mailer->send($message);
 
-if ($result)
+/*if ($result)
 {
 header('Location: index.html');
 }
-echo $result;
+echo $result;*/
 ?>
