@@ -309,7 +309,7 @@
                 "wpcf7-form-control-wrap YourName"><input id="yourname" type="text" name="yourname"
                 value="" size="40" required style="margin-bottom: 10px;"/></span>
                 <span style="color: white;">Please enter your First & Last name</span><br/><br/>
-                <span id="msgsent" style="color: white; font-size: 18px;" class="dontshow"><b>Message successfully sent!</b></span>
+                <span id="msgsent" style="color: white; font-size: 18px;" class="dontshow"><b><i>Message successfully sent!</i></b></span>
                 </p>
 
                 <p class="rsvp-submit"><input id="submit" type="submit" value="Submit"/></p>
@@ -321,9 +321,10 @@
                 <div class="wpcf7-response-output wpcf7-display-none"></div>
               </form>
               <script>
-              $('#submit').click(function(){
+              $('#submit').live("click", function(event){
                  if($('#yourname').val() != ''){
                     $( "#msgsent" ).removeClass( "dontshow" ).delay( 2000 ).fadeOut( 500 );
+                    setTimeout(function() { $('.rsvphide').click(); },3000);
                  }
               });
               </script>
