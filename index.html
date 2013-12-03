@@ -324,7 +324,7 @@
               $('#submit').live("click", function(event){
                  if($('#yourname').val() != ''){
                     $( "#msgsent" ).removeClass( "dontshow" ).delay( 2000 ).fadeOut( 500 );
-                    setTimeout(function() { $('.rsvphide').click(); },3000);
+                    setTimeout(function() { $('.rsvphide').click(); },2500);
                  }
               });
               </script>
@@ -440,16 +440,16 @@
                 "wpcf7-form-control-wrap YourName"><input id="yourname" type="text" name="yourname"
                 value="" size="40" required style="margin-bottom: 10px; color: black;"/></span></p>
 
-                <p class="rsvp-submit-mobile"><input id="submit-mobile" type="submit" value="Submit"/></p>
+                <p class="rsvp-submit-mobile"><input id="submit" type="submit" value="Submit"/></p>
 
 
                 <div class="wpcf7-response-output wpcf7-display-none"></div>
               </form>
               <script>
-              $('#submit-mobile').click(function(){
+              $('#submit').live("click", function(event){
                  if($('#yourname').val() != ''){
                     alert('Your RSVP message was successfully sent!');
-                 }
+                  }
               });
               </script>
         </div>
