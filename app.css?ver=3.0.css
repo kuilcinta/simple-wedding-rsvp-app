@@ -9,6 +9,8 @@
   box-sizing: border-box;
 }
 
+/* Photoshop overlay color: #33372d; */
+
 /* line 6, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
 html {
   font-size: 62.5%;
@@ -2977,8 +2979,24 @@ ul.orbit-bullets li.active.has-thumb {
   zoom: 1;
 }
 
-@media only screen and (max-width: 767px) {
+#map-medium {
+    display: none;
+  }
+
+#map-mobile {
+    display: none;
+  }
+
+@media only screen and (max-width: 967px) {
   /* line 83, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_orbit.scss */
+  #map {
+    display: none;
+  }
+
+  #map-medium {
+    display: block;
+  }
+
   .orbit.orbit-stack-on-small img.fluid-placeholder {
     visibility: visible;
   }
@@ -2989,6 +3007,21 @@ ul.orbit-bullets li.active.has-thumb {
     margin-bottom: 10px;
   }
 }
+
+@media only screen and (max-width: 545px) {
+  #map {
+    display: none;
+  }
+
+  #map-medium {
+    display: none;
+  }
+
+  #map-mobile {
+    display: block;
+  }
+}
+
 /* CSS for jQuery Reveal Plugin
  * Maintained for Foundation. foundation.zurb.com
  * Free to use under the MIT license.
