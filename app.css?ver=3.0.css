@@ -3020,6 +3020,12 @@ ul.orbit-bullets li.active.has-thumb {
   #map-mobile {
     display: block;
   }
+  .left {
+  display: none;
+  }
+  .right {
+  display: none;
+  }
 }
 
 /* CSS for jQuery Reveal Plugin
