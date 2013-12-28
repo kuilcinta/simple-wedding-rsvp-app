@@ -3012,7 +3012,6 @@ ul.orbit-bullets li.active.has-thumb {
   #map {
     display: none;
   }
-
   #map-medium {
     display: none;
   }
@@ -3020,11 +3019,8 @@ ul.orbit-bullets li.active.has-thumb {
   #map-mobile {
     display: block;
   }
-  .left {
-  display: none;
-  }
-  .right {
-  display: none;
+  ul.countdown {
+    display: none;
   }
 }
 
