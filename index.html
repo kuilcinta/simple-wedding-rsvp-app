@@ -148,9 +148,18 @@
                                 color: #a7abb1;
                                 font-size: 12px;
                                 }
+                                #mobile-date {
+                                  display: none;
+                                }
                                 @media only screen and (max-width: 425px) {
-                                  ul.countdown {
+                                  ul.countdown li span, ul.countdown li.seperator,
+                                  p.reg-date, .days_ref, .seconds_ref, .hours_ref, .minutes_ref  {
                                     display: none;
+                                  }
+                                  p.mobile-date {
+                                    display: block;
+                                    font-size: 18px;
+                                    font-weight: normal;
                                   }
                                 }
   /*]]>*/
@@ -395,7 +404,7 @@
           </li>
         </ul>
 
-        <p style="margin-top: -75px; color: #ffffff;"><i><b>...until the big day - June
+        <p class="reg-date" style="margin-top: -75px; color: #ffffff;"><i><b>...until the big day - June
         21st, 2014</b></i></p>
 
         <p><script class="source" type="text/javascript">
@@ -408,6 +417,8 @@
                 });
         //]]>
         </script> <!--<img src="holy.png" alt="" title="" width="" height="" />--></p>
+        <p class="mobile-date" style="margin-top: -75px; color: #ffffff;"><i><b>June
+        21st, 2014</b></i></p>
       </div>
     </div>
   </div>
