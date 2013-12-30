@@ -575,7 +575,7 @@ input[type="text"].oversize, input[type="password"].oversize, input[type="date"]
 /* line 34, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.5/scss/foundation/common/_forms.scss */
 input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus {
   background: #fafafa;
-  border-color: #b3b3b3;
+  border-color: #8d8d8d;
 }
 /* line 35, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.5/scss/foundation/common/_forms.scss */
 input[type="text"][disabled], input[type="password"][disabled], input[type="date"][disabled], input[type="datetime"][disabled], input[type="email"][disabled], input[type="number"][disabled], input[type="search"][disabled], input[type="tel"][disabled], input[type="time"][disabled], input[type="url"][disabled], textarea[disabled] {
@@ -3527,7 +3527,7 @@ ul.block-grid[data-clearing] {
 }
 /* line 6, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_tabs.scss */
 .tabs dt, .tabs li.section-title {
-  color: #b3b3b3;
+  color: #8d8d8d;
   cursor: default;
   display: block;
   float: left;
@@ -6416,6 +6416,82 @@ p.rsvp-name span.YourName input[type="text"] {
   display: block;
   color: #334433;
   font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  margin: 30px 30px;
+  box-shadow: none;
+  border: 0;
+}
+
+input#yourname.placeholder, {
+  color: #8d8d8d;
+  letter-spacing: 0px;
+  font-weight: normal;
+}
+
+input#yourname-mobile.placeholder, {
+  color: #8d8d8d;
+  letter-spacing: 0px;
+  font-weight: normal;
+}
+
+input[type="text"]:focus {
+  color: #8d8d8d;
+  letter-spacing: 0px;
+  font-weight: normal;
+}
+
+#partysize {
+   background: #eedddd;
+   width: 100%;
+   padding: 26px 10px;
+   font-size: 14px;
+   line-height: 1;
+   border: 0;
+   border-radius: 5px;
+   height: 34px;
+   font-family: "Courier New", Courier, monospace;
+   margin: 0px 30px;
+}
+
+#partysize-mobile {
+   background: #eedddd;
+   width: 100%;
+   padding: 26px 10px;
+   font-size: 14px;
+   line-height: 1;
+   border: 0;
+   border-radius: 5px;
+   height: 34px;
+   font-family: "Courier New", Courier, monospace;
+   margin: 30px 30px;
+}
+
+select#partysize {
+width: 300px;
+font-family: "Courier New", Courier, monospace;
+color: #8d8d8d;
+text-align: center;
+}
+
+select#partysize-mobile {
+width: 100%;
+font-family: "Courier New", Courier, monospace;
+color: #8d8d8d;
+text-align: center;
+margin: 0 auto;
+}
+
+p.rsvp-partysize span.PartySize input[type="text"] {
+  padding: 26px 10px;
+  width: 300px;
+  text-align: center;
+  background: #eedddd;
+  border-radius: 5px;
+  display: block;
+  color: #334433;
+  font-family: "Courier New", Courier, monospace;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: bold;
@@ -6424,6 +6500,14 @@ p.rsvp-name span.YourName input[type="text"] {
   box-shadow: none;
   border: 0;
 }
+
+p.rsvp-partysize {
+  width: 335px;
+  float: left;
+  height: 90px;
+  margin: 0 0 0 25px;
+}
+
 
 /* line 318, ../sass/app.scss */
 p.rsvp-name {
@@ -6564,6 +6648,22 @@ div.wpcf7-validation-errors {
 
 /* line 438, ../sass/app.scss */
 p.rsvp-name-mobile span.YourName input[type="text"] {
+  padding: 26px 0;
+  text-align: center;
+  background: #eedddd;
+  border-radius: 5px;
+  display: block;
+  color: #eedddd;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: italic;
+  box-shadow: none;
+  border: 0;
+}
+
+p.rsvp-name-partysize span.YourName input[type="text"] {
   padding: 26px 0;
   text-align: center;
   background: #eedddd;

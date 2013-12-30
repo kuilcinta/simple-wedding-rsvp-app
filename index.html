@@ -320,9 +320,19 @@
                 "wpcf7-list-item-label">Attending</span></label></span></span></span></p>
 
                 <p class="rsvp-name"><span class=
-                "wpcf7-form-control-wrap YourName"><input id="yourname" type="text" name="yourname"
+                "wpcf7-form-control-wrap YourName"><input id="yourname" type="text" name="yourname" placeholder="Enter Your First & Last Name"
                 value="" size="40" required style="margin-bottom: 10px;"/></span>
-                <span style="color: white;">Please enter your First & Last name</span><br/><br/>
+                <span class="styled-select">
+                  <select id="partysize" name="partysize" value="" required>
+                    <option value="">-- Select Total Size Of Party --</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+                  </select>
+                </span>
+                <br/><br/>
                 <span id="msgsent" style="color: white; font-size: 18px;" class="dontshow"><b><i>Message successfully sent!</i></b></span>
                 </p>
 
@@ -336,7 +346,7 @@
               </form>
               <script>
               $('#submit').live("click", function(event){
-                 if($('#yourname').val() != ''){
+                 if($('#yourname').val() != '' && $('#partysize').val() != ''){
                     $( "#msgsent" ).removeClass( "dontshow" ).delay( 1500 ).fadeOut( 500 );
                     setTimeout(function() { $('.rsvphide').click(); },2000);
                  }
@@ -459,6 +469,17 @@
                 <p class="rsvp-name-mobile"><span style="color: white;">Please enter your First & Last name</span><span class=
                 "wpcf7-form-control-wrap YourName"><input id="yourname-mobile" type="text" name="yourname"
                 value="" size="40" required style="margin-bottom: 10px; color: black;"/></span></p>
+                <span class="styled-select">
+                  <select id="partysize-mobile" name="partysize" value="" required>
+                    <option value="">-- Select Total Size Of Party --</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+                  </select>
+                </span>
+                <br/><br/><br/>
 
                 <p class="rsvp-submit-mobile"><input id="submit-mobile" type="submit" value="Submit"/></p>
 
@@ -467,7 +488,7 @@
               </form>
               <script>
               $('#submit-mobile').live("click", function(event){
-                 if($('#yourname-mobile').val() != ''){
+                 if($('#yourname-mobile').val() != '' && $('#partysize-mobile').val() != ''){
                     alert('Your RSVP message was successfully sent!');
                   }
               });
@@ -766,11 +787,7 @@
   //]]>
   </script><script type='text/javascript' src=
   'jquery.form.min.js%3Fver=3.32.0-2013.04.03'>
-</script><script type='text/javascript'>
-/* <![CDATA[ */
-  var _wpcf7 = {"loaderUrl":"http:\/\/kortneeandsean.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
-  /* ]]> */
-  </script><script type='text/javascript' src='scripts.js%3Fver=3.4.1'>
+</script><script type='text/javascript' src='scripts.js%3Fver=3.4.1'>
 </script><script type='text/javascript' src='scripts.js%3Fver=1.0'>
 </script><script type="text/javascript" src="jquery.downCount.js">
 </script><script class="source" type="text/javascript">
